@@ -5,6 +5,7 @@
 
 	/* Цвет выдиления ссылок и кнопок */
 	--accent-color: #2196f3;
+	--batton-hover: #188ce8;
 
 	/* Цвет для секций и кнопок */
 	--section-bg-color: #f5f4fa;
@@ -29,10 +30,28 @@ button {
 /* Селектор для устранения маркеров от списков ul*/
 .list,
 .galeri-link {
+	margin: 0;
 	list-style: none;
 	text-decoration: none;
 }
 
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	outline: 2px solid tomato;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
 /* Начало оформления Header*/
 
 /* WebStudio оформление логотипа в хедере и в футере*/
@@ -85,6 +104,7 @@ button {
 
 /*Contacts оформление контактных ссылок*/
 .header-link {
+	margin-bottom: 0;
 	/*Типографика*/
 	font-weight: 500;
 	font-size: 14px;
@@ -141,6 +161,10 @@ button {
 	/*Прочее*/
 	cursor: pointer;
 }
+.btn:hover,
+.btn:focus {
+	background-color: var(--batton-hover);
+}
 /*Hero ==============end================*/
 
 /*Sectin оформление заголовков и текста*/
@@ -164,6 +188,7 @@ button {
 }
 
 .text {
+	margin: 0;
 	/*Типографика*/
 	font-size: 14px;
 	line-height: 1.71;
@@ -181,6 +206,7 @@ button {
 	letter-spacing: 0.03em;
 }
 .cards-text {
+	margin: 0;
 	/*Типографика*/
 	font-size: 16px;
 	line-height: 1.2;
