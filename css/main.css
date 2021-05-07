@@ -90,7 +90,20 @@ h6 {
 	color: var(--primary-text-color);
 	text-decoration: none;
 }
-
+.container.header {
+	display: flex;
+	flex-direction: row;
+}
+.nav {
+	display: flex;
+}
+.menu {
+	display: flex;
+	widows: 294px;
+}
+.contacts {
+	display: flex;
+}
 /*Ссылки навигации в активном состоянии
 	эфект наведения и фокуса*/
 .nav .nav-link:hover,
@@ -181,6 +194,8 @@ h6 {
 }
 
 .title {
+	margin-bottom: 10px;
+
 	font-size: 14px;
 	line-height: 1.4;
 	letter-spacing: 0.03em;
