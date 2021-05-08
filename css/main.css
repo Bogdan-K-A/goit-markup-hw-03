@@ -27,9 +27,11 @@ body {
 button {
 	font-family: inherit;
 }
+
 /* Селектор для устранения маркеров от списков ul*/
 .list,
 .galeri-link {
+	padding: 0;
 	margin: 0;
 	list-style: none;
 	text-decoration: none;
@@ -42,8 +44,9 @@ button {
 	padding-left: 15px;
 	padding-right: 15px;
 
-	outline: 2px solid tomato;
+	/* outline: 2px solid tomato; */
 }
+
 h1,
 h2,
 h3,
@@ -53,100 +56,97 @@ h6 {
 	margin: 0;
 }
 
-/* Начало оформления Header*/
-
-/* WebStudio оформление логотипа в хедере и в футере*/
+/*Header*/
 .web {
 	color: var(--accent-color);
 }
 
 .logo,
 .footer-logo {
-	/*Типографика*/
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.2;
 	letter-spacing: 0.03em;
 
-	/*Отображение*/
 	color: var(--primary-text-color);
 	text-decoration: none;
 }
 
 .footer-logo {
+	display: inline-block;
+	margin: 0;
+	margin-bottom: 20px;
+
 	color: var(--primary-wight-color);
 }
 
-/*Nav оформление навигационных ссылок */
+/*================Nav====================== */
 .nav,
 .nav-link {
-	/*Типографика*/
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 
-	/*Отображение*/
 	color: var(--primary-text-color);
 	text-decoration: none;
 }
+
 .container.header,
 .nav,
 .menu,
 .contacts {
 	display: flex;
 }
+
 .header,
 .nav {
 	align-items: center;
 }
+
 .logo {
 	margin-right: 93px;
 	padding-top: 24px;
 	padding-bottom: 25px;
 }
+
 .menu .item + .item,
 .contacts .item + .item {
 	margin-left: 50px;
 }
-.menu,
-.contacts {
-	padding: 0;
-}
+
 .contacts {
 	margin-left: auto;
 }
+
 .menu .nav-link,
 .contacts .header-link {
 	padding-top: 32px;
 	padding-bottom: 32px;
 }
-/*Ссылки навигации в активном состоянии
-	эфект наведения и фокуса*/
+
 .nav .nav-link:hover,
 .nav .nav-link:focus {
 	color: var(--accent-color);
 }
+
 /*Указывает пользователю текущюю страницу */
 .nav .nav-link.current {
 	color: var(--accent-color);
 }
 
-/*Contacts оформление контактных ссылок*/
+/*Contacts*/
 .header-link {
-	/*Типографика*/
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 
-	/*Отображение*/
 	color: var(--secondary-text-color);
 	text-decoration: none;
 }
-/*Ссылки контактов в активном состоянии
-	эфект наведения и фокуса*/
+
 .header-link:hover,
 .header-link:focus {
 	color: var(--accent-color);
@@ -154,58 +154,50 @@ h6 {
 /*Header ==============end================*/
 
 /*Main начало оформления основного контента на странице*/
-/*Секция Hero содержит 
-	бекграунд, заголовок и кнопку*/
+/* Hero */
 .hero,
 .footer {
 	background-color: var(--footer-color);
 }
 .container .hero-title {
-	padding-left: auto;
-	padding-right: auto;
 	padding-top: 200px;
 	padding-bottom: 30px;
 }
 
 .hero-title {
-	/*Расположение*/
 	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 
-	/*Типографика*/
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
 
-	/*Отображение*/
 	color: var(--primary-wight-color);
 }
 
 /* Button Оформление кнопки */
-.container .btn-container {
+.container .btn-box {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	padding-bottom: 200px;
 }
+
 .btn {
-	/*Типографика*/
+	width: 200px;
+	height: 50px;
+
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.87;
 	letter-spacing: 0.06em;
 
-	/*Отображение*/
-	width: 200px;
-	height: 50px;
 	background-color: var(--accent-color);
 	color: var(--primary-wight-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	border: none;
 
-	/*Прочее*/
 	cursor: pointer;
 }
 
@@ -216,12 +208,42 @@ h6 {
 /*Hero ==============end================*/
 
 /*Sectin оформление заголовков и текста*/
+/* Особенности*/
+.description .description-box + .description-box {
+	margin-left: 30px;
+}
+
+.description {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	display: flex;
+	justify-content: space-between;
+}
+.description-item {
+	width: 270px;
+	height: 101px;
+}
+/* Особенности========and========== */
+
+/* Чем мы занимаемся */
+.galeri-container,
+.team-container {
+	padding-bottom: 94px;
+
+	display: flex;
+	justify-content: space-between;
+}
+/* Чем мы занимаемся=========and========== */
+
 .section.team {
 	background-color: var(--section-bg-color);
 	color: var(--primary-text-color);
 }
 
 .section-title {
+	margin-bottom: 50px;
+
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
@@ -239,16 +261,35 @@ h6 {
 
 .text {
 	margin: 0;
-	/*Типографика*/
+
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 
-	/*Отображение*/
 	color: var(--secondary-text-color);
 }
 /* Оформление карточек команды */
+.team-container {
+	padding-bottom: 94px;
+}
+
+.team-container-item {
+	width: 270px;
+	height: 368px;
+
+	background-color: var(--primary-wight-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+}
+
+.team-img {
+	margin-bottom: 30px;
+}
+
 .cards-title {
+	padding-bottom: 10px;
+
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
@@ -257,49 +298,63 @@ h6 {
 }
 .cards-text {
 	margin: 0;
-	/*Типографика*/
+	padding-bottom: 30px;
+
 	font-size: 16px;
 	line-height: 1.2;
 	text-align: center;
 	letter-spacing: 0.03em;
 
-	/*Отображение*/
 	color: var(--secondary-text-color);
 }
 /*Section ==============end================*/
 /*Main ==============end================*/
 
-/* Начало оформления Footer*/
-/* footer оборачивает все блоки в нутри футера */
+/*============ Footer============*/
 .footer {
 	background-color: var(--footer-color);
 }
 
-/* Address Оборачивает контактную информацию компании*/
+.footer-container {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Address*/
+.address {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	width: 231px;
+}
+
 .address-text {
-	/*Типографика*/
+	margin: 0;
+	margin-bottom: 9px;
+
 	font-style: normal;
 	font-size: 14px;
 	line-height: 1.7;
 	letter-spacing: 0.03em;
 
-	/*Отображение*/
 	color: var(--primary-wight-color);
 }
 
-/*Оформление meil & tel в футере*/
+/*Оформление meil & tel =========*/
+.address-item:nth-child(1) {
+	display: inline-block;
+	margin: 0;
+	margin-bottom: 9px;
+}
 .address-link {
-	/*Типографика*/
 	font-style: normal;
 	font-size: 14px;
 	line-height: 1.7;
 	letter-spacing: 0.03em;
 
-	/*Отображение*/
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.6);
 }
-/* Активность ссылок при наведении */
+
 .address-link:hover,
 .address-link:focus {
 	color: var(--accent-color);
