@@ -52,11 +52,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+a {
 	margin: 0;
 }
 
 /*Header*/
+.header {
+	border: 1px solid #ececec;
+}
 .web {
 	color: var(--accent-color);
 }
@@ -92,14 +97,14 @@ h6 {
 	text-decoration: none;
 }
 
-.container.header,
+.container.header-box,
 .nav,
 .menu,
 .contacts {
 	display: flex;
 }
 
-.header,
+.header-box,
 .nav {
 	align-items: center;
 }
@@ -259,8 +264,6 @@ h6 {
 }
 
 .text {
-	margin: 0;
-
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
@@ -296,7 +299,6 @@ h6 {
 	letter-spacing: 0.03em;
 }
 .cards-text {
-	margin: 0;
 	padding-bottom: 30px;
 
 	font-size: 16px;
@@ -327,7 +329,6 @@ h6 {
 }
 
 .address-text {
-	margin: 0;
 	margin-bottom: 9px;
 
 	font-style: normal;
@@ -363,17 +364,34 @@ h6 {
 /*=================================================Оформление страницы портфолио =========================================================*/
 
 /* Оформление кнопок фильтра */
+.filter-container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 94px;
+	padding-bottom: 50px;
+
+	display: flex;
+	width: 611px;
+	justify-content: space-between;
+	/* 
+	outline: 2px solid tomato; */
+}
+.filter-container .filter-btn:not(:last-child) {
+	margin-right: 8px;
+}
+
 .filter-btn {
-	/*Типографика*/
+	padding: 6px 22px;
+
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.6;
 	letter-spacing: 0.03em;
 
-	/*Отображение*/
+	border: none;
+	border-radius: 4px;
 	background: var(--section-bg-color);
 
-	/*Прочее*/
 	cursor: pointer;
 }
 /* Активность кнопок при наведении */
@@ -382,8 +400,32 @@ h6 {
 	background-color: var(--accent-color);
 	color: var(--primary-wight-color);
 }
+
+.galeri-set {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -30px;
+	margin-left: -30px;
+	padding-bottom: 94px;
+}
+.galeri-set .galeri-item {
+	margin-top: 30px;
+	margin-left: 30px;
+	flex-basis: calc(100% / - 30px);
+
+	width: 370px;
+	height: 404px;
+
+	border: 1px solid #eeeeee;
+	box-sizing: border-box;
+}
+.galeri-img {
+	margin-bottom: 20px;
+}
 /* Оформление карточек галереи */
 .portfolio-title {
+	margin-left: 24px;
+	margin-bottom: 4px;
 	/*Типографика*/
 	font-size: 18px;
 	line-height: 2;
@@ -392,6 +434,8 @@ h6 {
 	color: var(--primary-text-color);
 }
 .portfolio-text {
+	margin-left: 24px;
+	margin-bottom: 20px;
 	/*Типографика*/
 	font-size: 16px;
 	line-height: 1.87;

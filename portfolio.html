@@ -18,22 +18,24 @@
 <body>
   <!--Header содержит Логотип, навигацию по сайту, контакты.-->
   <header class="header">
-    <div class="container">
+    <div class="container header-box">
       <nav class="nav">
         <a class="logo" href="./index.html" title="На главную"><span class="web">Web</span>Studio</a>
-        <ul class="list">
-          <li><a class="nav-link" href="./index.html">Студия</a></li>
-          <li>
+        <ul class="list menu">
+          <li class="item">
+            <a class="nav-link" href="./index.html">Студия</a>
+          </li>
+          <li class="item">
             <a class="nav-link current" href="./portfolio.html">Портфолио</a>
           </li>
-          <li><a class="nav-link" href="">Контакты</a></li>
+          <li class="item"><a class="nav-link" href="">Контакты</a></li>
         </ul>
       </nav>
-      <ul class="list">
-        <li>
+      <ul class="list contacts">
+        <li class="item">
           <a class="header-link" href="mailto:info@devstudio.com" title="Email">info@devstudio.com</a>
         </li>
-        <li>
+        <li class="item">
           <a class="header-link" href="tel:380961111111" title="Phone number">+38 096 111 11 11</a>
         </li>
       </ul>
@@ -44,100 +46,124 @@
   <main class="portfolio-main">
     <h1 hidden>Наши работы</h1>
     <!-- filters выбирает нужное окно из галереи ===========-->
-    <ul class="list">
-      <li><button class="filter-btn" type="button">Все</button></li>
-      <li><button class="filter-btn" type="button">Веб-сайты</button></li>
-      <li><button class="filter-btn" type="button">Приложения</button></li>
-      <li><button class="filter-btn" type="button">Дизайн</button></li>
-      <li><button class="filter-btn" type="button">Маркетинг</button></li>
-    </ul>
+    <div class="container">
+      <ul class="list filter-container">
+        <li>
+          <button class="filter-btn" type="button">Все</button>
+        </li>
+        <li>
+          <button class="filter-btn" type="button">Веб-сайты</button>
+        </li>
+        <li>
+          <button class="filter-btn" type="button">Приложения</button>
+        </li>
+        <li>
+          <button class="filter-btn" type="button">Дизайн</button>
+        </li>
+        <li>
+          <button class="filter-btn" type="button">Маркетинг</button>
+        </li>
+      </ul>
 
-    <!-- Галерея работ компании======== -->
-    <ul class="list">
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img.jpg" alt="Ноутбук с карточками людей" width="370" height="294" />
-          <h2 class="portfolio-title">Технокряк</h2>
-          <p class="portfolio-text">Веб-сайт</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-1.jpg" alt="Два баскетбольмта играют в баскетбол" width="370"
-            height="294" />
-          <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
-          <p class="portfolio-text">Дизайн</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-2.jpg" alt="Логотип СиФуд" width="370" height="294" />
-          <h2 class="portfolio-title">Ресторан Seafood</h2>
-          <p class="portfolio-text">Приложение</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-3.jpg" alt="Чёрные наушники на белом фоне" width="370" height="294" />
-          <h2 class="portfolio-title">Проект Prime</h2>
-          <p class="portfolio-text">Маркетинг</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-4.jpg" alt="Две фирменные картонные коробочки" width="370"
-            height="294" />
-          <h2 class="portfolio-title">Проект Boxes</h2>
-          <p class="portfolio-text">Приложение</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-5.jpg" alt="Монитор с изобрашением аналитического содержания"
-            width="370" height="294" />
-          <h2 class="portfolio-title">Inspiration has no Borders</h2>
-          <p class="portfolio-text">Веб-сайт</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-6.jpg" alt="Разкрытый глНцевый журнал" width="370" height="294" />
-          <h2 class="portfolio-title">Издание Limited Edition</h2>
-          <p class="portfolio-text">Дизайн</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-7.jpg" alt="Фирменная бирка из магазина" width="370" height="294" />
-          <h2 class="portfolio-title">Проект LAB</h2>
-          <p class="portfolio-text">Маркетинг</p>
-        </a>
-      </li>
-      <li>
-        <a class="galeri-link" href="">
-          <img src="./img/portfolio/portfolio-img-8.jpg" alt="Молодой человек работает на ноутбуке" width="370"
-            height="294" />
-          <h2 class="portfolio-title">Growing Business</h2>
-          <p class="portfolio-text">Приложение</p>
-        </a>
-      </li>
-    </ul>
+
+      <!-- Галерея работ компании======== -->
+
+      <ul class="list galeri-set">
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img.jpg" alt="Ноутбук с карточками людей" width="370"
+              height="294" />
+            <h2 class="portfolio-title">Технокряк</h2>
+            <p class="portfolio-text">Веб-сайт</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-1.jpg" alt="Два баскетбольмта играют в баскетбол"
+              width="370" height="294" />
+            <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
+            <p class="portfolio-text">Дизайн</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-2.jpg" alt="Логотип СиФуд" width="370"
+              height="294" />
+            <h2 class="portfolio-title">Ресторан Seafood</h2>
+            <p class="portfolio-text">Приложение</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-3.jpg" alt="Чёрные наушники на белом фоне"
+              width="370" height="294" />
+            <h2 class="portfolio-title">Проект Prime</h2>
+            <p class="portfolio-text">Маркетинг</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-4.jpg" alt="Две фирменные картонные коробочки"
+              width="370" height="294" />
+            <h2 class="portfolio-title">Проект Boxes</h2>
+            <p class="portfolio-text">Приложение</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-5.jpg"
+              alt="Монитор с изобрашением аналитического содержания" width="370" height="294" />
+            <h2 class="portfolio-title">Inspiration has no Borders</h2>
+            <p class="portfolio-text">Веб-сайт</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-6.jpg" alt="Разкрытый глНцевый журнал"
+              width="370" height="294" />
+            <h2 class="portfolio-title">Издание Limited Edition</h2>
+            <p class="portfolio-text">Дизайн</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-7.jpg" alt="Фирменная бирка из магазина"
+              width="370" height="294" />
+            <h2 class="portfolio-title">Проект LAB</h2>
+            <p class="portfolio-text">Маркетинг</p>
+          </a>
+        </li>
+        <li class="galeri-item">
+          <a class="galeri-link" href="">
+            <img class="galeri-img" src="./img/portfolio/portfolio-img-8.jpg" alt="Молодой человек работает на ноутбуке"
+              width="370" height="294" />
+            <h2 class="portfolio-title">Growing Business</h2>
+            <p class="portfolio-text">Приложение</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </main>
 
   <!--Footer содержит логотип, физический адрес и контакты компаниию-->
   <footer class="footer">
-    <a class="footer-logo" href="./index.html" title="На главную"><span class="web">Web</span>Studio</a>
-    <address class="address">
-      <p class="address-text">г. Киев, пр-т Леси Украинки, 26</p>
-      <ul class="list">
-        <li>
-          <a class="address-link" href="mailto:info@devstudio.com" title="Email">info@devstudio.com</a>
-        </li>
-        <li>
-          <a class="address-link" href="tel:380961111111" title="Phone number">+38 096 111 11 11</a>
-        </li>
-      </ul>
-    </address>
+    <div class="container footer-container">
+      <div class="address">
+        <a class="footer-logo" href="./index.html" title="На главную"><span class="web">Web</span>Studio</a>
+        <address>
+          <p class="address-text">г. Киев, пр-т Леси Украинки, 26</p>
+          <ul class="list">
+            <li class="address-item">
+              <a class="address-link" href="mailto:info@devstudio.com" title="Email">info@devstudio.com</a>
+            </li>
+            <li class="address-item">
+              <a class="address-link" href="tel:380961111111" title="Phone number">+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </div>
   </footer>
 </body>
 
