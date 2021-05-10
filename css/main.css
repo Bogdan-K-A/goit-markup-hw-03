@@ -1,20 +1,12 @@
 :root {
-	/* Цвет текста */
 	--primary-text-color: #212121;
 	--secondary-text-color: #757575;
-
-	/* Цвет выдиления ссылок и кнопок */
 	--accent-color: #2196f3;
 	--batton-hover: #188ce8;
-
-	/* Цвет для секций и кнопок */
 	--section-bg-color: #f5f4fa;
-
-	/* Основной белый цвет */
 	--primary-wight-color: #ffffff;
-
-	/* Цвет подвала */
 	--footer-color: #2f303a;
+	--galeri-set-gap: 30px;
 }
 
 body {
@@ -44,7 +36,7 @@ button {
 	padding-left: 15px;
 	padding-right: 15px;
 
-	/* outline: 2px solid tomato; */
+	outline: 1px solid tomato;
 }
 
 h1,
@@ -53,11 +45,14 @@ h3,
 h4,
 h5,
 h6,
-p,
-a {
+p {
 	margin: 0;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+}
 /*Header*/
 .header {
 	border: 1px solid #ececec;
@@ -188,8 +183,7 @@ a {
 }
 
 .btn {
-	width: 200px;
-	height: 50px;
+	padding: 10px 34px;
 
 	font-weight: 700;
 	font-size: 16px;
@@ -213,6 +207,10 @@ a {
 
 /*Sectin оформление заголовков и текста*/
 /* Особенности*/
+.subject {
+	display: none;
+}
+
 .description .description-box + .description-box {
 	margin-left: 30px;
 }
@@ -374,7 +372,7 @@ a {
 	width: 611px;
 	justify-content: space-between;
 	/* 
-	outline: 2px solid tomato; */
+	outline: 1px solid tomato; */
 }
 .filter-container .filter-btn:not(:last-child) {
 	margin-right: 8px;
@@ -394,52 +392,46 @@ a {
 
 	cursor: pointer;
 }
-/* Активность кнопок при наведении */
+
 .filter-btn:hover,
 .filter-btn:focus {
 	background-color: var(--accent-color);
 	color: var(--primary-wight-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* Оформление карточек галереи */
 .galeri-set {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: -30px;
-	margin-left: -30px;
+	margin-top: calc(-1 * var(--galeri-set-gap));
+	margin-left: calc(-1 * var(--galeri-set-gap));
 	padding-bottom: 94px;
 }
 .galeri-set .galeri-item {
-	margin-top: 30px;
-	margin-left: 30px;
-	flex-basis: calc(100% / - 30px);
-
-	width: 370px;
-	height: 404px;
+	margin-top: var(--galeri-set-gap);
+	margin-left: var(--galeri-set-gap);
+	flex-basis: calc(100% / 3 - var(--galeri-set-gap));
 
 	border: 1px solid #eeeeee;
-	box-sizing: border-box;
 }
-.galeri-img {
-	margin-bottom: 20px;
+.galeri-content {
+	padding: 20px 24px;
 }
-/* Оформление карточек галереи */
 .portfolio-title {
-	margin-left: 24px;
 	margin-bottom: 4px;
-	/*Типографика*/
+
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
-	/*Отображение*/
+
 	color: var(--primary-text-color);
 }
 .portfolio-text {
-	margin-left: 24px;
-	margin-bottom: 20px;
-	/*Типографика*/
 	font-size: 16px;
 	line-height: 1.87;
 	letter-spacing: 0.03em;
-	/*Отображение*/
+
 	color: var(--secondary-text-color);
 }
