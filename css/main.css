@@ -413,11 +413,11 @@ img {
 	margin-top: var(--galeri-set-gap);
 	margin-left: var(--galeri-set-gap);
 	flex-basis: calc(100% / 3 - var(--galeri-set-gap));
-
-	border: 1px solid #eeeeee;
 }
 .galeri-content {
 	padding: 20px 24px;
+
+	border: 1px solid #eeeeee;
 }
 .portfolio-title {
 	margin-bottom: 4px;
