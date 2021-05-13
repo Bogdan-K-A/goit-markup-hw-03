@@ -226,6 +226,7 @@ img {
 .description .description-item {
 	margin-left: var(--galeri-set-gap);
 	flex-basis: calc(100% / 4 - var(--galeri-set-gap));
+	height: 101px;
 }
 
 /* Особенности========and========== */
@@ -237,7 +238,7 @@ img {
 
 .galeri-container .galeri-item {
 	margin-left: var(--galeri-set-gap);
-	flex-basis: calc(100% / 3 - var(--galeri-set-gap));
+	flex-basis: calc((100% * 90px) / 3 - var(--galeri-set-gap));
 }
 /* Чем мы занимаемся=========and========== */
 
@@ -274,7 +275,7 @@ img {
 /* Оформление карточек команды */
 .team-item {
 	margin-left: var(--galeri-set-gap);
-	flex-basis: calc(100% / 4 - var(--galeri-set-gap));
+	flex-basis: calc((100% * 120px) / 4 - var(--galeri-set-gap));
 
 	background-color: var(--primary-wight-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -388,7 +389,7 @@ img {
 .galeri-set .galeri-item {
 	margin-top: var(--galeri-set-gap);
 	margin-left: var(--galeri-set-gap);
-	flex-basis: calc(100% / 3 - var(--galeri-set-gap));
+	flex-basis: calc((100% * 90px) / 3 - var(--galeri-set-gap));
 }
 
 .galeri-content {
